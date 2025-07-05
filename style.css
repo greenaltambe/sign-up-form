@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "nuku";
+	src: url(assets/fonts/nuku1-webfont.woff2) format("woff2"),
+		url(assets/fonts/nuku1-webfont.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--color-valid: #2ecc71;          /* Emerald green for valid input */
+	--color-error: #e74c3c;          /* Alizarin red for invalid input */
+
+	--color-background: #a8dadc;     /* Soft teal */
+	--color-secondary: #f4a261;      /* Warm amber */
+	--color-surface: #f1faee;        /* Off-white background (e.g., cards) */
+	--color-primary-text: #264653;   /* Deep charcoal text */
+	--color-accent: #e9c46a;         /* Soft golden accent */
+
+	--color-background-transparent: rgba(168, 218, 220, 0.8);
+	--color-secondary-transparent: rgba(244, 162, 97, 0.8);
+	--color-surface-transparent: rgba(241, 250, 238, 0.8);
+	--color-primary-text-transparent: rgba(38, 70, 83, 0.8);
+	--color-accent-transparent: rgba(233, 196, 106, 0.8);
+}
+
+body {
+	background-color: var(--color-surface);
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.left {
+	position: relative;
+}
+
+.right {
+  height: 100%;
+	padding: 40px;
+	color: var(--color-primary-text);
+}
+
+.left img {
+	max-height: 100vh;
+}
+
+.logo {
+	position: absolute;
+	top: 40px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-family: nuku, sans-serif;
+	color: var(--color-accent);
+	background-color: var(--color-accent-transparent);
+	padding: 20px;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
+}
+
+.credits {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+}
+
+.credits p {
+	font-family: nuku, sans-serif;
+	color: var(--color-primary-text);
+	font-size: 14px;
+	text-align: center;
+}
+
+.credits a {
+	color: var(--color-secondary);
+	text-decoration: none;
+}
+
+.credits a:hover {
+	color: var(--color-secondary-transparent);
+	text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+form .font-header p {
+  margin-bottom: 10px;
+  font-family: nuku, sans-serif;
+  color: var(--color-primary-text);
+}
+
+h1, h2 {
+  font-family: nuku, sans-serif;
+  color: var(--color-primary-text);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form .form-input-section {
+  background-color: var(--color-background);
+  padding: 40px;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+
+.input-group-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.input-group label {
+	font-family: sans-serif;
+	font-size: 0.8rem;
+	color: var(--color-primary-text-transparent);
+}
+
+.input-group input {
+	padding: 5px 20px;
+	border-radius: 5px;
+	border: 1px solid var(--color-primary-text);
+}
+
+.input-group input::placeholder {
+	color: var(--color-primary-text-transparent);
+	font-style: italic;
+	font-size: 0.6rem;
+}
+
+.input-group input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.input-group input:valid {
+  border-color: var(--color-valid);
+}
+
+.input-group input:focus:invalid {
+  border-color: var(--color-error);
+}
+
+.input-group button {
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+  border: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--color-secondary);
+}
+
+.form-footer-section a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.form-footer-section a:hover {
+  color: var(--color-secondary-transparent);
+  text-decoration: underline;
+}
